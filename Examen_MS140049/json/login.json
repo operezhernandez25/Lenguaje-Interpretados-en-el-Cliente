@@ -1,0 +1,1 @@
+data = '[    {"user":"admin", "pass": "admin123" },    {"user":"vendedor", "pass": "vendedor123"},    {"user":"invitado", "pass": "invitado123"}]';

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <table class="tabla-materiales">
+                <thead>
+                  <th>Codigo</th>
+                  <th>Material</th>
+                  <th>Cantidad</th>
+                  <th>Magnitud</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="codigo">1</td>
+                    <td class="material">Ladrillo Común</td>
+                    <td class="cantidad">50</td>
+                    <td class="magnitud">un</td>
+                  </tr>
+                  <tr>
+                    <td class="codigo">2</td>
+                    <td class="material">Arena Lavada</td>
+                    <td class="cantidad">2</td>
+                    <td class="magnitud">m3</td>
+                  </tr>
+                  <tr>
+                    <td class="codigo">3</td>
+                    <td class="material">Murokal de 5 Lts</td>
+                    <td class="cantidad">1</td>
+                    <td class="magnitud">un</td>
+                  </tr>
+                </tbody>
+              </table>
+
+<script>
+    let materiales = [];
+
+document.querySelectorAll('.tabla-materiales tbody tr').forEach(function(e){
+  let fila = {
+    codigo: e.querySelector('.codigo').innerText,
+    material: e.querySelector('.material').innerText,
+    cantidad: e.querySelector('.cantidad').innerText,
+    magnitud: e.querySelector('.magnitud').innerText
+  };
+  materiales.push(fila);
+});
+
+console.log(materiales);
+</script>
+
+</body>
+</html>
