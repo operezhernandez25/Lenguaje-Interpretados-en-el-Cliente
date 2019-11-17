@@ -9,6 +9,25 @@
     <!-- Bootstrap CSS -->
     <script type="text/javascript" src="./js/inventario1.js"> </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+      .container-venta,.container-carrito{
+        display: flex;
+      flex-direction: column;
+      }
+
+      .input-aceptar{
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .tabla{
+        margin-top: 30px;
+      }
+
+      .texto-centrado{
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
         <body onload="traerDatos(); buscador()">
@@ -41,22 +60,22 @@
               
               
               
-                    <div class="row-12 pt-5" style="margin-left: 30%;">
-                      <div class="section">
-              
-                        <h2>Venta de Productos</h2>
-              
-                        <form>
-                          <input class="w-50" type="text" id="datos" placeholder="Ingrese el codigo y la cantidad que desea llevar, separado por coma"> <br>
-                          <button type="button" id="boton" onclick="compra()" class="btn btn-primary mt-3"> Aceptar</button>
-                          <br>
-              
-                        </form>
-                        <h2>Productos</h2>
+                   
               
               
-              
-                        <table class=" table w-50" id="tablaproductos">
+                  </div>
+                  <div class="row" style="padding-top:40px">
+                    <div class="col-md"></div>
+                    <div class="col-md-6 container-venta">
+                      <h1 style="text-align:center">
+                        Tienda Online
+                      </h1>
+                      <input class="form-control input-aceptar" type="text" id="datos" placeholder="Ingrese el codigo y la cantidad que desea llevar, separado por coma">
+                      <button class="btn btn-primary" onclick="compra()" >
+                        Aceptar
+                      </button>
+                     
+                      <table class=" table tabla" id="tablaproductos">
                           <thead class="thead-dark">
                             <tr>
                               <th>Codigo</th>
@@ -69,11 +88,26 @@
               
                           </tbody>
                         </table>
-              
+                    </div>
+                    <div class="col-md container-carrito">
+                      <h1 style="text-align: center;">
+                        Carrito
+                      </h1>
+                      <div class="alert alert-success texto-centrado" role="alert">
+                          <h4>
+                              Factura de compra
+                          </h4>
+                          <h4>
+                            Supermercado Don Diego 
+                          </h4>
+                      </div>
+                      <div id="carrito-compras" class="alert alert-warning texto-centrado" role="alert">
+                          
+                      </div>
+                      <div id="total" class="alert alert-danger texto-centrado">
+                          
                       </div>
                     </div>
-              
-              
                   </div>
               
               
